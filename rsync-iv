@@ -1,0 +1,7 @@
+#!/bin/sh
+rsync "$@"
+e=$?
+if [ $e -eq 24 ]; then
+    exit 0
+fi
+exit $e
